@@ -20,9 +20,7 @@ export default function Products() {
 
   const fetchProducts = () => {
     axiosInstance.get('products').then((response: any) => {
-      console.log(response)
       setProducts(response.data);
-      
     });
   };
 
@@ -34,7 +32,6 @@ export default function Products() {
       headerLeft: () => {
         return (
           <Button title="Ürün Ekle" onPress={() => navigate('ProductCreate')} />
-          
         );
       },
     });
@@ -57,8 +54,6 @@ export default function Products() {
                   style={{width: 100, height: 100}}
                 />
                 <Text>{item?.title}</Text>
-                
-                
               </View>
             </TouchableOpacity>
           );
